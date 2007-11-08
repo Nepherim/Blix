@@ -1,0 +1,368 @@
+
+/* reset
+--------------------------------------------------*/
+body,h1,h2,h3,h4,h5,h6,p,form,fieldset {margin:0;padding:0;}
+.low {display:none;}
+
+/* body
+--------------------------------------------------*/
+body {
+  margin:0;
+  padding:15px 0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:75%;
+  line-height:1.6em;
+  text-align:center;
+}
+body#commentspopup {padding:0;}
+
+/* headings
+--------------------------------------------------*/
+h1 {
+  font-size:30px;
+  padding-bottom: 10px;
+}
+#content h2 {
+  margin:0 0 5px 0;
+  font-family:Georgia, serif;
+  font-size:1.6em;
+  font-weight:normal;
+}
+#content h3 {
+  margin:0 0 5px 0;
+  font-size:1em;
+}
+#content h4 {
+  margin:0;
+  font-size:1em;
+}
+
+/* links
+--------------------------------------------------*/
+a {text-decoration:none;}
+a img {border:none;}
+
+/* paragraphs, lists, etc
+--------------------------------------------------*/
+p {
+  margin:0;
+  padding:0 0 5px 0;
+}
+ul {
+  margin:0 0 0 2.5em;
+  padding:0 0 5px 0;
+}
+ul ul {padding:0;}
+blockquote {
+  margin:0;
+  padding:0 5px;
+  font-style:italic;
+}
+pre {
+  overflow:auto;
+  margin:0 0 5px 0;
+  padding:4px;
+}
+pre, code, kbr {font-family:Courier, Monaco, monospace;}
+code, kbr {padding:0 2px;}
+abbr, acronym {
+  font-size:0.9em;
+  letter-spacing:1px;
+}
+
+/* images
+--------------------------------------------------*/
+img.left {
+  float:left;
+  margin:0 12px 0 0;
+}
+img.right {
+  float:right;
+  margin:0 0 0 12px;
+}
+img.center {
+  display: block;
+  margin:0 auto;
+}
+
+/* container
+--------------------------------------------------*/
+#container {
+  width:790px;
+  margin:0 auto;
+  padding:30px 30px 0 30px;
+  text-align:left;
+}
+
+/* header
+--------------------------------------------------*/
+#header {
+  height:115px;
+  padding:0 0 0 18px;
+}
+#header .pagegroup {
+	padding: 20px 0 5px;
+	display: block;
+	}
+#pagetitle {
+   float:left;
+   }
+#sitelogo {
+   float: right;
+   }
+#header .sitetitle {
+   font-size: 30px;
+   padding: 42px 15px 10px 0;
+   font-weight: bold;
+   text-align: right;
+}
+
+/* navigation
+--------------------------------------------------*/
+#navigation {
+  height:2.7em;
+  line-height:2.7em;
+  clear: right;
+}
+#navigation .pageactions {
+  float:right;
+  padding-right: 15px;
+  font-size: .85em;
+}
+#navigation ul {
+  margin:0;
+  padding:0;
+}
+#navigation li {
+  float:left;
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  white-space:nowrap;
+}
+#navigation .navlinks li {
+  border-right:1px solid;
+}
+#navigation .pageactions li a {
+  line-height: 1em;
+  padding: 4px;
+  margin-top: 8px;
+}
+#navigation li a {
+  display:block;
+  padding:0 5px;
+}
+#navigation .navlinks li a {
+  font-size:0.8em;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+* html #navigation a {width:1%;} 
+/* see http://www.positioniseverything.net/explorer/escape-floats.html */
+
+#navigation form {
+  float:right;
+  height:100%;
+  width:140px;
+  padding:0 15px;
+  border-left:1px solid;
+  line-height:0;
+}
+#navigation form fieldset {
+  
+/* centering the search form could've
+  been done way more elegant but IEWin
+  and Opera refused to follow the rules */
+  margin-top:7px;
+  border:0 solid; 
+/* Opera */
+}
+* html #navigation form fieldset {margin-top:7px;}
+#navigation #searchfield {
+  height:1.5em;
+  width:100px;
+  margin:0 5px 0 0;
+  padding:0;
+  border:1px solid;
+  font-size:0.8em;
+  vertical-align:middle;
+}
+#navigation #searchbutton {
+  height:2em;
+  width:auto;
+  padding:0 1px;
+  border:1px solid;
+  font-size:9px;
+  letter-spacing:1px;
+  text-align:center;
+  vertical-align:middle;
+}
+
+/* content
+--------------------------------------------------*/
+#content {
+  float:left;
+  width:600px;
+  padding-top:12px;
+}
+.info {
+  position:relative;
+  margin-top:-3px;
+  padding:3px;
+  border-top:1px solid;
+  border-bottom:1px solid;
+  font-size:0.9em;
+}
+.info a {
+  margin-right:6px;
+  padding-right:9px;
+  border-right:1px solid;
+}
+
+/* form
+--------------------------------------------------*/
+form {padding:6px 0;}
+#commentform, #contactform {margin-bottom:5px;}
+form fieldset {border:0 solid;} 
+/* Opera */
+
+form p {
+  padding:6px 0;
+  border-bottom:1px solid;
+}
+form label {
+  display:block;
+  float:left;
+  width:60px;
+}
+form em {
+  margin-left:5px;
+  font-size:0.9em;
+  font-style:normal;
+}
+form input {
+  cursor: pointer;
+}
+form input, form textarea {
+  padding:2px;
+  border:1px solid;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:0.9em;
+}
+form textarea {
+  width:595px;
+}
+form textarea {overflow:auto;}
+form .button {
+  width:90px !important;
+  border-bottom:1px solid;
+  font-weight:bold;
+}
+form .hiddenfield {display:none;}
+form .info {padding-left:90px;}
+
+/* subcontent
+--------------------------------------------------*/
+#subcontent {
+  float:right;
+  width:157px;
+  padding:15px 0 0 15px;
+  font-size:0.9em;
+  line-height:1.5em;
+}
+* html #subcontent {padding-top:32px;} 
+/* dirty fix for IEWIN; temporary! */
+
+#subcontent ul, #subcontent p {margin:0 10px;}
+
+/* subcontent headings
+--------------------------------------------------*/
+#subcontent .sidehead {
+  font-weight: bold;
+
+  margin:18px 0 10px 0;
+  font-family:Georgia,serif;
+  font-size:1em;
+  line-height:1em;
+}
+#subcontent .sidehead em {
+  display:block;
+  padding:5px 10px;
+  font-style:normal;
+}
+#subcontent p {
+   margin: 0;
+   padding: 0;
+}
+
+/* subcontent list
+--------------------------------------------------*/
+#subcontent ul li {
+  margin:2px 0 2px 18px;
+  padding-bottom:2px;
+  border-bottom:1px solid;
+}
+#subcontent li a {
+  display:block;
+  padding:1px 0;
+  height:1%; 
+/* IE WIN */
+}
+#subcontent ul li ul {margin:0;}
+#subcontent ul li li {
+  margin:0;
+  padding:0 0 3px 0;
+  border-bottom:none;
+}
+#subcontent ul li ul ul {margin:0 0 0 16px;}
+
+
+/* footer
+--------------------------------------------------*/
+#footer {
+  clear:both;
+  margin:40px 0 15px 0;
+  font-size:0.9em;
+  border-top:1px solid;
+}
+/*
+#footer p {
+  padding:12px 0 18px 0;
+  border-top:1px solid;
+}
+*/
+#footer strong {font-weight:normal;}
+
+/* pmwiki
+--------------------------------------------------*/
+ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+.varlink, pre, code.escaped { font-size: 110% !important; }
+code.escaped { white-space: nowrap; }
+.vspace { margin-top:1em; }
+.indent { margin-left:40px; }
+.outdent { margin-left:40px; text-indent:-40px; }
+a.createlinktext { text-decoration:none; border-bottom:none; }
+a.createlink { text-decoration:none; position:relative; top:-0.5em; font-weight:bold; font-size:smaller; border-bottom:none; }
+img { border:0px; }
+.diffbox { width: 100% !important;}
+#wikidiff { font-size: 110%; }
+.versions {
+	float: right;
+	text-align: right;
+	}
+.clearfix:after { 
+/* float hack used to float content correctly */
+    content: "."; 
+   	display: block; 
+   	height: 0; 
+   	clear: both; 
+    visibility: hidden;
+	}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+
+/* End hide from IE-mac */	
+#navigation .createlink {
+   display: none;
+}

@@ -1,0 +1,12 @@
+version=pmwiki-2.2.0-beta63 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.9) Gecko/20071025 Firefox/2.0.0.9
+author=
+charset=ISO-8859-1
+csum=
+ctime=1194302894
+host=127.0.0.1
+name=Site.Blix-SiteNav
+rev=23
+targets=Grp.MyPage
+text=* [[Grp/MyPage | Page 1]]%0a* [[Grp/MyPage | Page 2]]
+time=1194453438

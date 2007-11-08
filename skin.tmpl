@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link rel='stylesheet' href='$SkinDirUrl/layout.css' type='text/css' />
+	<link rel='stylesheet' href='$SkinDirUrl/color-$SkinColor.css' type='text/css' />
+	<script type="text/javascript" src="$SkinDirUrl/javascript/jquery-1.2.1.pack.js"></script>
+	<script type="text/javascript" src="$SkinDirUrl/javascript/Blix.js"></script>
+	
+<!--HTMLHeader-->
+</head>
+
+<body><div id="container">
+
+<div id="header" style='background-image:url($TitleBg);'>
+	<div id="pagetitle">
+		<!--PageTitleFmt-->
+		<a href='{$ScriptUrl}/{$Group}/{$DefaultName}' class='pagegroup'>{$Group}</a>
+		<h1>{$Titlespaced}</h1>
+		<!--/PageTitleFmt-->
+	</div>
+	<!--PageHeaderFmt-->
+	<div id="sitelogo" style=""><!--wiki:{$SiteGroup}.{$SkinName}-SiteHeader--></div>
+	<!--/PageHeaderFmt-->
+</div>
+
+<div id="navigation">
+	<form action='$ScriptUrl'>
+		<fieldset>
+			<input class="hidden" type='hidden' name='n' value='{$FullName}' />
+			<input class="hidden" type='hidden' name='action' value='search' />
+			<input id="searchfield" type='text' name='q' value='' />
+			<input id="searchbutton" type='submit' name="searchbutton" value='Go!' />
+		</fieldset>
+	</form>
+	<div class="navlinks">
+		<!--wiki:{$SiteGroup}.{$SkinName}-SiteNav-->	
+	</div>
+	<div class="pageactions">
+		<!--PageActionFmt-->
+	   <!--wiki:{$SiteGroup}.PageActions-->
+		<!--/PageActionFmt-->
+	</div>
+</div>
+
+<hr class="low" />
+<div id="content">
+	<!--PageText-->
+</div>
+
+<hr class="low" />
+<div id="subcontent">
+	<!--PageRightFmt-->
+	<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+	<!--/PageRightFmt-->
+</div>
+
+<hr class="low" />
+<div id="footer" class="clearfix">
+	<!--PageFooterFmt-->
+	<!--wiki:{$SiteGroup}.{$SkinName}-SiteFooter-->
+	<!--/PageFooterFmt-->
+</div>
+
+</div>
+</body>
+</html>
