@@ -24,6 +24,7 @@
 </div>
 
 <div id="navigation">
+	<!--PageSearchFmt-->
 	<form action='$ScriptUrl'>
 		<fieldset>
 			<input class="hidden" type='hidden' name='n' value='{$FullName}' />
@@ -32,8 +33,9 @@
 			<input id="searchbutton" type='submit' name="searchbutton" value='Go!' />
 		</fieldset>
 	</form>
+	<!--/PageSearchFmt-->
 	<div class="navlinks">
-		<!--wiki:{$SiteGroup}.{$SkinName}-SiteNav-->	
+		<!--wiki:{$Group}.{$SkinName}-SiteNav {$SiteGroup}.{$SkinName}-SiteNav-->	
 	</div>
 	<div class="pageactions">
 		<!--PageActionFmt-->
@@ -57,10 +59,20 @@
 <hr class="low" />
 <div id="footer" class="clearfix">
 	<!--PageFooterFmt-->
-	<!--wiki:{$SiteGroup}.{$SkinName}-SiteFooter-->
+	<!--wiki:{$Group}.{$SkinName}-SiteFooter {$SiteGroup}.{$SkinName}-SiteFooter-->
 	<!--/PageFooterFmt-->
 </div>
 
 </div>
+
+<div id="credits">
+	<div class="alignleft">
+		Adapted by <a href="http://pmwiki.com/Cookbook/Blix/">solidGone.org (version {$SkinVersion})</a>
+	</div>
+	<div class="alignright">
+		Powered by <a href="http://pmwiki.com/wiki/PmWiki/ChangeLog">{$Version}</a>
+	</div>
+</div>
+
 </body>
 </html>

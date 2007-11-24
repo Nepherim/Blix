@@ -1,3 +1,11 @@
+/*
+ * PmWiki Blix: http://pmwiki.com/Cookbook/Blix and http://skins.solidgone.org/
+ *
+ * Copyright (c) 2007 David Gilbert
+ * Dual licensed under the MIT and GPL licenses:
+ *	 http://www.opensource.org/licenses/mit-license.php
+ *	 http://www.gnu.org/licenses/gpl.html
+ */
 
 /* reset
 --------------------------------------------------*/
@@ -62,6 +70,7 @@ pre {
   overflow:auto;
   margin:0 0 5px 0;
   padding:4px;
+  width: 99%;
 }
 pre, code, kbr {font-family:Courier, Monaco, monospace;}
 code, kbr {padding:0 2px;}
@@ -321,7 +330,7 @@ form .info {padding-left:90px;}
 --------------------------------------------------*/
 #footer {
   clear:both;
-  margin:40px 0 15px 0;
+  margin:40px 0 5px 0;
   font-size:0.9em;
   border-top:1px solid;
 }
@@ -333,11 +342,26 @@ form .info {padding-left:90px;}
 */
 #footer strong {font-weight:normal;}
 
+/* credits
+--------------------------------------------------*/
+#credits {
+	margin: 0px auto;
+	width: 790px;
+	font-size: 85%;
+	line-height: 120%;
+	color: #a0a0a0;
+	}
+.alignleft {
+	float: left;
+	}
+.alignright {
+	float: right;
+	}
+
 /* pmwiki
 --------------------------------------------------*/
 ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
 .varlink, pre, code.escaped { font-size: 110% !important; }
-code.escaped { white-space: nowrap; }
 .vspace { margin-top:1em; }
 .indent { margin-left:40px; }
 .outdent { margin-left:40px; text-indent:-40px; }
@@ -350,6 +374,7 @@ img { border:0px; }
 	float: right;
 	text-align: right;
 	}
+.quickref p {margin:0; padding:0;}
 .clearfix:after { 
 /* float hack used to float content correctly */
     content: "."; 

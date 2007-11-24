@@ -1,18 +1,18 @@
 <?php if (!defined('PmWiki')) exit();
 /*
- * PmWiki Blix skin
+ * PmWiki Blix: http://pmwiki.com/Cookbook/Blix and http://skins.solidgone.org/
  * Version 1.0.0  (7-Nov-07)
  * @requires PmWiki 2.2
  *
- * Examples at: http://pmwiki.com/Cookbook/Blix and http://skins.solidgone.com/
  * Copyright (c) 2007 David Gilbert
  * Dual licensed under the MIT and GPL licenses:
- *    http://www.opensource.org/licenses/mit-license.php
- *    http://www.gnu.org/licenses/gpl.html
+ *	 http://www.opensource.org/licenses/mit-license.php
+ *	 http://www.gnu.org/licenses/gpl.html
  */
+
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Blix"';
-$FmtPV['$SkinVersion'] = '"1.0.0"';
+$FmtPV['$SkinVersion'] = '"1.0.1"';
 
 ## Default color scheme
 global $SkinColor;
@@ -41,6 +41,9 @@ $HTMLStylesFmt['pmwiki'] = '';
 global $LinkPageCreateFmt;
 SDV($LinkPageCreateFmt, "<a class='createlinktext' href='\$PageUrl?action=edit'>\$LinkText</a>");
 
+## Create a nosearch markup, since one doesn't exist
+Markup('nosearch', 'directives',  '/\\(:nosearch:\\)/ei',
+		"SetTmplDisplay('PageSearchFmt',0)");
 
 ##  The following lines make additional editing buttons appear in the
 ##  edit page for subheadings, lists, tables, etc.
