@@ -1,7 +1,6 @@
 <?php if (!defined('PmWiki')) exit();
 /*
  * PmWiki Blix: http://pmwiki.com/Cookbook/Blix and http://skins.solidgone.org/
- * Version 1.0.0  (7-Nov-07)
  * @requires PmWiki 2.2
  *
  * Copyright (c) 2007 David Gilbert
@@ -12,14 +11,15 @@
 
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Blix"';
-$FmtPV['$SkinVersion'] = '"1.0.1"';
+$FmtPV['$SkinVersion'] = '"1.1.0"';
 
-## Default color scheme
-global $SkinColor;
-if (isset($_GET['color'])) {
+global $SkinColor, $ValidSkinColors;
+if ( !is_array($ValidSkinColors) ) $ValidSkinColors = array();
+array_push($ValidSkinColors, 'spring', 'autumn');
+if ( isset($_GET['color']) && in_array($_GET['color'], $ValidSkinColors) ) {
 	$SkinColor = $_GET['color'];
-} else {
-	SDV($SkinColor, 'spring');
+} elseif ( !in_array($SkinColor, $ValidSkinColors) ) {
+	$SkinColor = 'spring';
 }
 
 global $TitleBg, $SkinDirUrl;
@@ -62,9 +62,8 @@ $GUIButtons['strong'] = array(200, "'''", "'''", '$[Bold]',
 $GUIButtons['em'] = array(210, "''", "''", '$[Italic]',
                   '$GUIButtonDirUrlFmt/text_italic.png"$[Italic]"',
                   '$[ak_em]');
-$GUIButtons['strike'] = array(220, "(-", "-)", '$[Strikethrough]',
-                  '$GUIButtonDirUrlFmt/text_strikethrough.png"$[Strikethrough]"',
-                  '$[ak_em]');
+$GUIButtons['strike'] = array(220, "{-", "-}", '$[Strikethrough]',
+                  '$GUIButtonDirUrlFmt/text_strikethrough.png"$[Strikethrough]"');
 $GUIButtons['sup'] = array(224, "'^", "^'", '$[Superscript]',
                   '$GUIButtonDirUrlFmt/text_superscript.png"$[Superscript]"');
 $GUIButtons['sub'] = array(225, "'_", "_'", '$[Subscript]',
@@ -76,9 +75,9 @@ $GUIButtons['small'] = array(240, "'-", "-'", '$[Small text]',
 
 $GUIButtons['separator2'] = array(290, '', '', '', '$GUIButtonDirUrlFmt/separator.png');
 $GUIButtons['ol'] = array(300, '\\n# ', '\\n', '$[Ordered list]',
-                    '$GUIButtonDirUrlFmt/text_list_bullets.png"$[Ordered (numbered) list]"');
+                    '$GUIButtonDirUrlFmt/text_list_numbers.png"$[Ordered (numbered) list]"');
 $GUIButtons['ul'] = array(310, '\\n* ', '\\n', '$[Unordered list]',
-                    '$GUIButtonDirUrlFmt/text_list_numbers.png"$[Unordered (bullet) list]"');
+                    '$GUIButtonDirUrlFmt/text_list_bullets.png"$[Unordered (bullet) list]"');
 $GUIButtons['hr'] = array(320, '\\n----\\n', '', '',
                     '$GUIButtonDirUrlFmt/text_horizontalrule.png"$[Horizontal rule]"');
 $GUIButtons['table'] = array(330,

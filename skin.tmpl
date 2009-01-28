@@ -1,25 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+	<title>$WikiTitle: {$Group}/{$Titlespaced}</title>
 	<link rel='stylesheet' href='$SkinDirUrl/layout.css' type='text/css' />
 	<link rel='stylesheet' href='$SkinDirUrl/color-$SkinColor.css' type='text/css' />
 	<script type="text/javascript" src="$SkinDirUrl/javascript/jquery-1.2.1.pack.js"></script>
 	<script type="text/javascript" src="$SkinDirUrl/javascript/Blix.js"></script>
-	
+
 <!--HTMLHeader-->
 </head>
-
 <body><div id="container">
 
 <div id="header" style='background-image:url($TitleBg);'>
-	<div id="pagetitle">
-		<!--PageTitleFmt-->
-		<a href='{$ScriptUrl}/{$Group}/{$DefaultName}' class='pagegroup'>{$Group}</a>
-		<h1>{$Titlespaced}</h1>
-		<!--/PageTitleFmt-->
-	</div>
 	<!--PageHeaderFmt-->
-	<div id="sitelogo" style=""><!--wiki:{$SiteGroup}.{$SkinName}-SiteHeader--></div>
+	<div id="sitelogo"><!--wiki:{$Group}.SiteHeader {$SiteGroup}.{$SkinName}-SiteHeader {$SiteGroup}.SiteHeader--></div>
 	<!--/PageHeaderFmt-->
 </div>
 
@@ -35,7 +29,7 @@
 	</form>
 	<!--/PageSearchFmt-->
 	<div class="navlinks">
-		<!--wiki:{$Group}.{$SkinName}-SiteNav {$SiteGroup}.{$SkinName}-SiteNav-->	
+		<!--wiki:{$Group}.SiteTabs {$SiteGroup}.SiteTabs {$SiteGroup}.{$SkinName}-SiteNav-->
 	</div>
 	<div class="pageactions">
 		<!--PageActionFmt-->
@@ -44,22 +38,25 @@
 	</div>
 </div>
 
-<hr class="low" />
-<div id="content">
-	<!--PageText-->
-</div>
-
-<hr class="low" />
 <div id="subcontent">
 	<!--PageRightFmt-->
 	<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
 	<!--/PageRightFmt-->
 </div>
 
-<hr class="low" />
+<div id="content-wrapper">
+	<div id="content">
+		<!--PageTitleFmt-->
+			<a href='{$ScriptUrl}/{$Group}' class="pagegroup">{$Group}</a>
+			<h1><a href='{$ScriptUrl}/{$FullName}'>{$Titlespaced}</a></h1>
+		<!--/PageTitleFmt-->
+		<!--PageText-->
+	</div>
+</div>
+
 <div id="footer" class="clearfix">
 	<!--PageFooterFmt-->
-	<!--wiki:{$Group}.{$SkinName}-SiteFooter {$SiteGroup}.{$SkinName}-SiteFooter-->
+	<!--wiki:{$Group}.SiteFooter {$SiteGroup}.{$SkinName}-SiteFooter {$SiteGroup}.SiteFooter-->
 	<!--/PageFooterFmt-->
 </div>
 
@@ -67,10 +64,9 @@
 
 <div id="credits">
 	<div class="alignleft">
-		Adapted by <a href="http://pmwiki.com/Cookbook/Blix/">solidGone.org (version {$SkinVersion})</a>
 	</div>
 	<div class="alignright">
-		Powered by <a href="http://pmwiki.com/wiki/PmWiki/ChangeLog">{$Version}</a>
+		<p><a href="http://pmwiki.org/Cookbook/Blix/">Blix</a> theme adapted by <a href="http://skins.solidgone.org/">David Gilbert</a>, powered by <a href="http://pmwiki.com/">PmWiki</a></p>
 	</div>
 </div>
 
