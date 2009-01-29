@@ -9,56 +9,58 @@
 
 <!--HTMLHeader-->
 </head>
-<body><div id="container">
+<body>
 
-<div id="header" style='background-image:url($TitleBg);'>
-	<!--PageHeaderFmt-->
-	<div id="sitelogo"><!--wiki:{$Group}.SiteHeader {$SiteGroup}.{$SkinName}-SiteHeader {$SiteGroup}.SiteHeader--></div>
-	<!--/PageHeaderFmt-->
-</div>
-
-<div id="navigation">
-	<!--PageSearchFmt-->
-	<form action='$ScriptUrl'>
-		<fieldset>
-			<input class="hidden" type='hidden' name='n' value='{$FullName}' />
-			<input class="hidden" type='hidden' name='action' value='search' />
-			<input id="searchfield" type='text' name='q' value='' />
-			<input id="searchbutton" type='submit' name="searchbutton" value='Go!' />
-		</fieldset>
-	</form>
-	<!--/PageSearchFmt-->
-	<div class="navlinks">
-		<!--wiki:{$Group}.SiteTabs {$SiteGroup}.SiteTabs {$SiteGroup}.{$SkinName}-SiteNav-->
+<div id="container">
+	<div id="header" style='background-image:url($TitleBg);'>
+		<!--PageHeaderFmt-->
+		<div id="sitelogo"><!--wiki:{$Group}.SiteHeader {$SiteGroup}.{$SkinName}-SiteHeader {$SiteGroup}.SiteHeader--></div>
+		<!--/PageHeaderFmt-->
 	</div>
-	<div class="pageactions">
-		<!--PageActionFmt-->
-	   <!--wiki:{$SiteGroup}.PageActions-->
-		<!--/PageActionFmt-->
+
+	<div id="navigation">
+		<!--PageSearchFmt-->
+		<form action='$ScriptUrl'>
+			<fieldset>
+				<input class="hidden" type='hidden' name='n' value='{$FullName}' />
+				<input class="hidden" type='hidden' name='action' value='search' />
+				<input id="searchfield" type='text' name='q' value='' />
+				<input id="searchbutton" type='submit' name="searchbutton" value='Go!' />
+			</fieldset>
+		</form>
+		<!--/PageSearchFmt-->
+		<div class="navlinks">
+			<!--wiki:{$Group}.SiteTabs {$SiteGroup}.SiteTabs {$SiteGroup}.{$SkinName}-SiteNav-->
+		</div>
+		<div class="pageactions">
+			<!--PageActionFmt-->
+			<!--wiki:{$SiteGroup}.PageActions-->
+			<!--/PageActionFmt-->
+		</div>
 	</div>
-</div>
 
-<div id="subcontent">
-	<!--PageRightFmt-->
-	<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
-	<!--/PageRightFmt-->
-</div>
-
-<div id="content-wrapper">
-	<div id="content">
-		<!--PageTitleFmt-->
-			<a href='{$ScriptUrl}/{$Group}' class="pagegroup">{$Group}</a>
-			<h1><a href='{$ScriptUrl}/{$FullName}'>{$Titlespaced}</a></h1>
-		<!--/PageTitleFmt-->
-		<!--PageText-->
+	<div id="content-wrapper" class="force_contain">
+		<div id="content_bg">&nbsp;</div>
+		<div id="content">
+			<!--PageTitleFmt-->
+				<a href='{$ScriptUrl}/{$Group}' class="pagegroup">{$Group}</a>
+				<h1><a href='{$ScriptUrl}/{$FullName}'>{$Titlespaced}</a></h1>
+			<!--/PageTitleFmt-->
+			<!--PageText-->
+		</div>
+		<div id="subcontent">
+			<div id='subcontent_bg'><!-- --></div>
+			<!--PageRightFmt-->
+			<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+			<!--/PageRightFmt-->
+		</div>
 	</div>
-</div>
 
-<div id="footer" class="clearfix">
-	<!--PageFooterFmt-->
-	<!--wiki:{$Group}.SiteFooter {$SiteGroup}.{$SkinName}-SiteFooter {$SiteGroup}.SiteFooter-->
-	<!--/PageFooterFmt-->
-</div>
+	<div id="footer" class="clearfix">
+		<!--PageFooterFmt-->
+		<!--wiki:{$Group}.SiteFooter {$SiteGroup}.{$SkinName}-SiteFooter {$SiteGroup}.SiteFooter-->
+		<!--/PageFooterFmt-->
+	</div>
 
 </div>
 
