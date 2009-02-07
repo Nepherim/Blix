@@ -22,20 +22,21 @@ if ( isset($_GET['color']) && in_array($_GET['color'], $ValidSkinColors) ) {
 	$SkinColor = 'spring';
 }
 
-global $TitleBg, $SkinDirUrl;
-SDV($TitleBg,($SkinColor=='autumn' ? 'gradient_gold.png' : 'header_bg.jpg') );
-$FmtPV['$TitleBg'] = '"' . $SkinDirUrl . '/images/backgrounds/' . $TitleBg . '"';
+## Override pmwiki styles otherwise they will override styles declared in css
+global $Blix_Width, $Blix_TitleBg, $Blix_TitleColor, $SkinDirUrl, $HTMLStylesFmt;
+$HTMLStylesFmt['pmwiki'] = '';
+if (!empty($Blix_TitleBg))
+	$HTMLStylesFmt['blix'] = '#header {background-image:url(' .$SkinDirUrl . '/images/backgrounds/' . $Blix_TitleBg .'); '
+		.(!empty($Blix_TitleColor) ?' background-color:'.$Blix_TitleColor.';' :'') .'}';
+if (!empty($Blix_Width))
+	$HTMLStylesFmt['blix'] = '#container, #credits {max-width:' .$Blix_Width .';}';
 
 ## Add a custom page storage location
-global $PageStorePath, $WikiLibDirs;
+global $WikiLibDirs;
 $PageStorePath = dirname(__FILE__)."/wikilib.d/{\$FullName}";
 $where = count($WikiLibDirs);
 if ($where>1) $where--;
 array_splice($WikiLibDirs, $where, 0, array(new PageStore($PageStorePath)));
-
-## Override pmwiki styles otherwise they will override styles declared in css
-global $HTMLStylesFmt;
-$HTMLStylesFmt['pmwiki'] = '';
 
 ## Define a link stye for new page links
 global $LinkPageCreateFmt;

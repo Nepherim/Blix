@@ -130,7 +130,7 @@ img.center, img.aligncenter {
 #header {
 	height:115px;
 	padding:0 0 0 18px;
-	background-position:right;
+	background-position:left;
 	background-repeat:no-repeat;
 }
 #header .pagegroup {
@@ -230,22 +230,16 @@ img.center, img.aligncenter {
 
 /* content
 --------------------------------------------------*/
+#content-container {
+	margin-right: 207px;
+	background: white url(images/spring/container_bg.gif) repeat-y scroll right top;
+	}
 #content-wrapper {
+	float: left;
 	width: 100%;
-	position: relative;
 }
 #content {
-	float: left;
-	width: 75%;
-	padding:14px 5px 0 0;
-}
-#content_bg {
-	position:absolute;
-	right:208px;
-	top:0;
-	height:100%;
-	line-height: 0;
-	text-align: -9999px;
+	padding:14px 30px 0 0;
 }
 .singlecol #content {
 	float:none;
@@ -269,25 +263,35 @@ img.center, img.aligncenter {
 	margin:15px 0 22px 0;
 }
 .entry .info .date {
-	margin-right:6px;
 	padding-right:9px;
-	border-right:1px solid;
 }
 .entry .info em {
 	padding-right:6px;
 	font-style:normal;
 }
+.entry .info .date,
+.entry .info .comments,
 .entry .info .author,
 .entry .info .tags {
-	margin:0 0 0 6px;
-	padding:0 0 0 10px;
-	border-left:1px solid;
-	border-right:none;
+	margin:0 6px 0 0;
+	padding:0 7px 0 0;
+	border-right:1px solid;
 }
+.entry .info .author{
+	border: none;
+	}
 .entry .info .filedunder {
 	padding:3px 0 0 0;
 	font-size:0.9em;
 	border-top:1px solid;
+}
+.editlink {
+	position:absolute;
+	right:14px;
+	top: 2px;
+	height:14px;
+	width:14px;
+	line-height: 1.25em;
 }
 
 /* mini-entry
@@ -413,10 +417,10 @@ form .info {padding-left:90px;}
 }
 /* content misc
 --------------------------------------------------*/
-.next a {float:right;}
-.previous a {float:left;}
-#entrynavigation {
-	overflow: auto;
+.next a, .next-entries a {float:right;}
+.previous a, .previous-entries a {float:left;}
+#entrynavigation, .page-navigation {
+	overflow: hidden;
 	height:1%;
 	margin-bottom:13px;
 	padding-bottom:13px;
@@ -426,18 +430,20 @@ form .info {padding-left:90px;}
 /* subcontent
 --------------------------------------------------*/
 #subcontent {
-	position: relative;
-	float:right;
-	width:205px;
+	background: white url(images/spring/container_bg.gif) repeat-y scroll left top;
+	float:left;
+	width:207px;
+	margin-left: -222px;
 	padding:15px 0 0 15px;
 	font-size:0.9em;
 	line-height:1.5em;
 }
 * html #subcontent {padding-top:32px;} /* dirty fix for IEWIN; temporary! */
 #subcontent_bg {
-	position:absolute;
-	right:208px;
-	top:0;
+	position:relative;
+	right:15px;
+	top:-15px;
+	margin-bottom: -45px;
 }
 #subcontent ul, #subcontent p {margin:0 10px;}
 

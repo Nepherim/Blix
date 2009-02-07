@@ -4,15 +4,15 @@
 	<title>$WikiTitle: {$Group}/{$Titlespaced}</title>
 	<link rel='stylesheet' href='$SkinDirUrl/layout.css' type='text/css' />
 	<link rel='stylesheet' href='$SkinDirUrl/color-$SkinColor.css' type='text/css' />
-	<script type="text/javascript" src="$SkinDirUrl/javascript/jquery-1.2.1.pack.js"></script>
-	<script type="text/javascript" src="$SkinDirUrl/javascript/Blix.js"></script>
+	<script type="text/javascript" src="$SkinDirUrl/javascript/jquery.js"></script>
+	<script type="text/javascript" src="$SkinDirUrl/javascript/blix.js"></script>
 
 <!--HTMLHeader-->
 </head>
 <body>
 
 <div id="container">
-	<div id="header" style='background-image:url($TitleBg);'>
+	<div id="header">
 		<!--PageHeaderFmt-->
 		<div id="sitelogo"><!--wiki:{$Group}.SiteHeader {$SiteGroup}.{$SkinName}-SiteHeader {$SiteGroup}.SiteHeader--></div>
 		<!--/PageHeaderFmt-->
@@ -39,21 +39,23 @@
 		</div>
 	</div>
 
-	<div id="content-wrapper" class="force_contain">
-		<div id="content_bg">&nbsp;</div>
-		<div id="content">
-			<!--PageTitleFmt-->
-				<a href='{$ScriptUrl}/{$Group}' class="pagegroup">{$Group}</a>
-				<h1><a href='{$ScriptUrl}/{$FullName}'>{$Titlespaced}</a></h1>
-			<!--/PageTitleFmt-->
-			<!--PageText-->
+	<div id="content-wrapper">
+		<div id="content-container">
+			<div id="content">
+				<!--PageTitleFmt-->
+					<a href='{$ScriptUrl}/{$Group}' class="pagegroup">{$Group}</a>
+					<h1><a href='{$PageUrl}'>{$Titlespaced}</a></h1>
+				<!--/PageTitleFmt-->
+				<!--PageText-->
+			</div>
 		</div>
-		<div id="subcontent">
-			<div id='subcontent_bg'><!-- --></div>
-			<!--PageRightFmt-->
-			<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
-			<!--/PageRightFmt-->
-		</div>
+	</div>
+
+	<div id="subcontent">
+		<div id='subcontent_bg'><!-- --></div>
+		<!--PageRightFmt-->
+		<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+		<!--/PageRightFmt-->
 	</div>
 
 	<div id="footer" class="clearfix">

@@ -52,7 +52,6 @@ kbr {color:#009193;}
 	padding-top:0;
 	border-top:30px solid white;
 	background-color:white;
-	/*background:white url(images/spring/container_bg.gif) 500px 0px repeat-y;*/
 }
 #container.singlecol,
 #commentblockpopup #container {background-image:none;}
@@ -60,7 +59,7 @@ kbr {color:#009193;}
 --------------------------------------------------*/
 #header {
 	background-color:#F0F9F9;
-	background-image:url(images/spring/header_bg.jpg);
+	background-image:url(images/backgrounds/header_bg.jpg);
 }
 #header .sitetitle {
 	color: #009193;
@@ -100,25 +99,27 @@ kbr {color:#009193;}
 	padding-left:12px;
 	background:url(images/spring/more.gif) center left no-repeat;
 }
-.entry .info .date {
-	padding-left:15px;
-	border-color:#949494;
-	background:url(images/spring/post.gif) center left no-repeat;
-}
+.entry .info .date,
 .entry .info .comments {
 	padding-left:15px;
 	border-color:#949494;
-	background:url(images/spring/comments.gif) no-repeat;
+}
+.entry .info .date {
+	background:url(images/spring/post.gif) center left no-repeat;
+}
+.entry .info .comments {
+	background:url(images/spring/comments.gif) 0 1px no-repeat;
+}
+.entry .info .tags,
+.entry .info .author {
+	padding-left:13px;
+	border-color:#949494;
 }
 .entry .info .author {
-	padding-left:23px;
-	border-color:#949494;
-	background:url(images/spring/author.gif) 10px 2px no-repeat;
+	background:url(images/spring/author.gif) 0 2px no-repeat;
 }
 .entry .info .tags {
-	padding-left:23px;
-	border-color:#949494;
-	background:url(images/spring/categories_yellow.gif) 10px 2px no-repeat;
+	background:url(images/spring/categories_yellow.gif) 0 2px no-repeat;
 }
 .entry #filedunder {border-color:#F3F4F4;}
 
@@ -139,8 +140,6 @@ kbr {color:#009193;}
 /* Comments
 --------------------------------------------------*/
 #commentblock h2 a {color:#6C8C37;}
-/*#commentblock li.comment {list-style-image:url(images/spring/comments.gif);}
-*/
 #commentblock li.trackback,#commentblock li.pingback {list-style-image:url(images/spring/pingtrackback.gif);}
 #commentblock form {background-color:#EDF3DE;}
 #commentblock .header {background-color:#EDF3DE;}
@@ -177,13 +176,7 @@ form .inputbutton {
 }
 #entrynavigation {border-color:#F3F4F4;}
 .editlink {
-	position:absolute;
-	right:14px;
-	top: 2px;
-	height:14px;
-	width:14px;
-	line-height: 1.1em;
-	background:url(images/spring/edit.gif) 0 -14px no-repeat;
+	background:url(images/spring/edit.gif) 0 -13px no-repeat;
 	padding-left: 18px;
 }
 
@@ -194,7 +187,6 @@ form .inputbutton {
 	height:45px;
 	width:15px;
 }
-/*#subcontent {background: white url(images/spring/container_bg.gif) repeat-y scroll left top;}*/
 
 /* subcontent headings
 --------------------------------------------------*/
