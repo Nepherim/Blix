@@ -277,9 +277,6 @@ img.center, img.aligncenter {
 	padding:0 7px 0 0;
 	border-right:1px solid;
 }
-.entry .info .author{
-	border: none;
-	}
 .entry .info .filedunder {
 	padding:3px 0 0 0;
 	font-size:0.9em;
@@ -445,7 +442,7 @@ form .info {padding-left:90px;}
 	top:-15px;
 	margin-bottom: -45px;
 }
-#subcontent ul, #subcontent p {margin:0 10px;}
+#subcontent ul, #subcontent p {margin:0 0;}
 
 /* subcontent headings
 --------------------------------------------------*/
@@ -472,7 +469,6 @@ form .info {padding-left:90px;}
 #subcontent ul li {
 	margin:2px 0 2px 18px;
 	padding-bottom:2px;
-	border-bottom:1px solid;
 }
 #subcontent li a {
 	display:block;
@@ -601,6 +597,20 @@ img { border:0px; }
 * html .clearfix {height: 1%;}
 
 /* End hide from IE-mac */
-#navigation .createlink {
-	display: none;
-}
+.readmore {
+	display: block;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	}
+#wikiedit form img, #searchform fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	}
+#navigation .createlink { display: none; }
+.wikimessage {
+	color: red;
+	font-weight: bold;
+	font-size: 110%;
+	}
