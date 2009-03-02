@@ -9,7 +9,7 @@
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Blix"';
-$FmtPV['$SkinVersion'] = '"1.2.0"';
+$FmtPV['$SkinVersion'] = '"1.1.0"';
 
 # Create a nosearch markup, since one doesn't exist
 Markup('nosearch', 'directives',  '/\\(:nosearch:\\)/ei', "SetTmplDisplay('PageSearchFmt',0)");
