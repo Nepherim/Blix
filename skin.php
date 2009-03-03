@@ -14,7 +14,7 @@ $FmtPV['$SkinVersion'] = '"1.1.0"';
 # Create a nosearch markup, since one doesn't exist
 Markup('nosearch', 'directives',  '/\\(:nosearch:\\)/ei', "SetTmplDisplay('PageSearchFmt',0)");
 
-global $Blix_Width, $Blix_TitleBg, $Blix_TitleColor, $SkinDirUrl;
+global $Blix_Width, $Blix_TitleBg, $Blix_TitleColor, $SkinDirUrl, $HTMLStylesFmt;
 if (!empty($Blix_TitleBg))
 	$HTMLStylesFmt['blix'] = '#header {background-image:url(' .$SkinDirUrl . '/images/backgrounds/' . $Blix_TitleBg .'); '
 		.(!empty($Blix_TitleColor) ?' background-color:'.$Blix_TitleColor.';' :'') .'}';
