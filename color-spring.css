@@ -110,7 +110,7 @@ kbr {color:#009193;}
 .entry .info .comments {
 	background:url(images/spring/comments.gif) 0 1px no-repeat;
 }
-.entry .info .tags,
+.entry .info .entrytags,
 .entry .info .author {
 	padding-left:13px;
 	border-color:#949494;
@@ -118,7 +118,7 @@ kbr {color:#009193;}
 .entry .info .author {
 	background:url(images/spring/author.gif) 0 2px no-repeat;
 }
-.entry .info .tags {
+.entry .info .entrytags {
 	background:url(images/spring/categories_yellow.gif) 0 2px no-repeat;
 }
 .entry #filedunder {border-color:#F3F4F4;}

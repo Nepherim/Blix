@@ -9,24 +9,37 @@
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Blix"';
-$FmtPV['$SkinVersion'] = '"1.1.0"';
+$FmtPV['$SkinVersion'] = '"2.0.0"';
 
 # Create a nosearch markup, since one doesn't exist
 Markup('nosearch', 'directives',  '/\\(:nosearch:\\)/ei', "SetTmplDisplay('PageSearchFmt',0)");
 
 global $Blix_Width, $Blix_TitleBg, $Blix_TitleColor, $SkinDirUrl, $HTMLStylesFmt;
 if (!empty($Blix_TitleBg))
-	$HTMLStylesFmt['blix'] = '#header {background-image:url(' .$SkinDirUrl . '/images/backgrounds/' . $Blix_TitleBg .'); '
+	$HTMLStylesFmt['blix'] .= '#header {background-image:url(' .$SkinDirUrl . '/images/backgrounds/' . $Blix_TitleBg .'); '
 		.(!empty($Blix_TitleColor) ?' background-color:'.$Blix_TitleColor.';' :'') .'}';
 if (!empty($Blix_Width))
-	$HTMLStylesFmt['blix'] = '#container, #credits {max-width:' .$Blix_Width .';}';
+	$HTMLStylesFmt['blix'] .= '#container, #credits {max-width:' .$Blix_Width .';}';
 
 # ----------------------------------------
 # - Standard Skin Setup
 # ----------------------------------------
-$FmtPV['$WikiTitle'] = '$GLOBALS["WikiTitle"]';
+global $PageLogoUrl, $PageLogoUrlHeight, $PageLogoUrlWidth;
+if (!empty($PageLogoUrl)) {
+	if (!isset($PageLogoUrlWidth) || !isset($PageLogoUrlHeight)) {
+		$size = getimagesize($PageLogoUrl);
+		SDV($PageLogoUrlWidth, ($size ?$size[0]+15 :0) .'px');
+		SDV($PageLogoUrlHeight, ($size ?$size[1] :0) .'px');
+	}
+	$HTMLStylesFmt['blix'] .= '#header .sitetitle a{height:' .$PageLogoUrlHeight .'; background: url(' .$PageLogoUrl .') left top no-repeat} '.
+		'#header .sitetitle a, #header .sitetag{padding-left: ' .$PageLogoUrlWidth .'} '.
+		'#header .sitetag{margin-top: ' .(30-substr($PageLogoUrlHeight,0,-2)) .'px}';
+}
 
-# Define a link stye for new page links
+$FmtPV['$WikiTitle'] = '$GLOBALS["WikiTitle"]';
+$FmtPV['$WikiTag'] = '$GLOBALS["WikiTag"]';
+
+# Define a link style for new page links
 global $LinkPageCreateFmt;
 SDV($LinkPageCreateFmt, "<a class='createlinktext' href='\$PageUrl?action=edit'>\$LinkText</a>");
 

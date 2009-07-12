@@ -132,22 +132,13 @@ img.center, img.aligncenter {
 	padding:0 0 0 18px;
 	background-position:left;
 	background-repeat:no-repeat;
+	overflow: hidden;
 }
-#header .pagegroup {
-	padding: 20px 0 5px;
-	display: block;
-	}
-#pagetitle {
-	float:left;
-	}
-#sitelogo .vspace {
-	display: none;
-	}
 #header .sitetitle {
-	font-size: 30px;
-	padding: 42px 15px 10px 0;
-	font-weight: bold;
+	padding: 18px 15px 10px 0;
 }
+#header .sitetitle a{float:left; font-size:30px; font-weight:bold; display: block}
+#header .sitetag {float: left; clear: left}
 
 /* navigation
 --------------------------------------------------*/
@@ -241,6 +232,10 @@ img.center, img.aligncenter {
 #content {
 	padding:14px 30px 0 0;
 }
+#content .pagegroup {
+	padding: 20px 0 5px;
+	display: block;
+	}
 .singlecol #content {
 	float:none;
 	width:auto;
@@ -261,6 +256,7 @@ img.center, img.aligncenter {
 	border-bottom:1px solid;
 	font-size:0.9em;
 	margin:15px 0 22px 0;
+	clear:both;
 }
 .entry .info .date {
 	padding-right:9px;
@@ -270,12 +266,15 @@ img.center, img.aligncenter {
 	font-style:normal;
 }
 .entry .info .date,
-.entry .info .comments,
 .entry .info .author,
-.entry .info .tags {
+.entry .info .entrytags {
 	margin:0 6px 0 0;
 	padding:0 7px 0 0;
 	border-right:1px solid;
+}
+.entry .info .comments{
+	margin:0 6px 0 0;
+	padding:0 7px 0 0;
 }
 .entry .info .filedunder {
 	padding:3px 0 0 0;
