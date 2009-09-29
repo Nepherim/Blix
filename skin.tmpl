@@ -22,10 +22,10 @@
 
 	<div id="navigation">
 		<!--PageSearchFmt-->
-		<form action='$ScriptUrl'>
+		<form action='$ScriptUrl' method="get">
 			<fieldset>
 				<input class="hidden" type='hidden' name='n' value='{$FullName}' />
-				<input class="hidden" type='hidden' name='action' value='search' />
+				<input class="hidden" type='hidden' name='action' value='$[search]' />
 				<input id="searchfield" type='text' name='q' value='' />
 				<input id="searchbutton" type='submit' name="searchbutton" value='$[Go!]' />
 			</fieldset>
@@ -73,7 +73,7 @@
 	<div class="alignleft">
 	</div>
 	<div class="alignright">
-		<p><a href="http://www.kingcosmonaut.de/blix/">Blix</a> theme adapted by <a href="http://solidgone.org/Skins/">David Gilbert</a>, powered by <a href="http://pmwiki.com/">PmWiki</a></p>
+		<p><a href="http://www.kingcosmonaut.de/blix/">Blix</a> $[theme adapted by] <a href="http://solidgone.org/Skins/">David Gilbert</a>, $[powered by] <a href="http://pmwiki.com/">PmWiki</a></p>
 	</div>
 </div>
 <!--HTMLFooter-->

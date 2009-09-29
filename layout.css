@@ -1,5 +1,5 @@
 /*
- * PmWiki Blix: http://pmwiki.com/Cookbook/Blix and http://skins.solidgone.org/
+ * PmWiki Blix: http://pmwiki.com/Cookbook/Blix and http://solidgone.org/Skins/
  *
  * Copyright (c) 2007 David Gilbert
  * Dual licensed under the MIT and GPL licenses:
@@ -413,14 +413,14 @@ form .info {padding-left:90px;}
 }
 /* content misc
 --------------------------------------------------*/
-.next a, .next-entries a {float:right;}
-.previous a, .previous-entries a {float:left;}
+.blogit-next-entries a, .blogit-previous-entries a {font-size:130%; font-weight: bold;}
+.next a, .blogit-next-entries a {float:right;}
+.previous a, .blogit-previous-entries a {float:left;}
 #entrynavigation, .page-navigation {
 	overflow: hidden;
 	height:1%;
 	margin-bottom:13px;
 	padding-bottom:13px;
-	border-bottom:1px solid;
 	font-size:0.9em;
 }
 /* subcontent
@@ -596,7 +596,8 @@ img { border:0px; }
 * html .clearfix {height: 1%;}
 
 /* End hide from IE-mac */
-.readmore {
+.blogit-listmore {text-align:right;}
+.blogit-readmore {
 	display: block;
 	margin-top: 10px;
 	padding-bottom: 10px;
