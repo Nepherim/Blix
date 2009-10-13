@@ -333,12 +333,12 @@ img.center, img.aligncenter {
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:0.55em;
 }
-#commentblock ul {margin:0 0 0 20px;}
+#commentblock ol {margin:0 0 0 20px;}
 #commentblock li {
 	margin-bottom:18px;
 }
 #commentblock li p {padding:0 0 10px 0;}
-#commentblock .header {
+#commentblock .blogit-comment-header {
 /*	position:relative;*/
 	margin:0 0 10px 0;
 	padding:0 6px;
@@ -349,9 +349,9 @@ margin-left:-35px;
 padding-left:35px;
 
 }
-* html #commentblock .header {height:19px;} /* IEWin */
-#commentblock .header strong {font-family:Georgia,sans-serif;}
-#commentblock .header .avatar {
+* html #commentblock .blogit-comment-header {height:19px;} /* IEWin */
+#commentblock .blogit-comment-header strong {font-family:Georgia,sans-serif;}
+#commentblock .blogit-comment-header .avatar {
 	position:absolute;
 	top:1px;
 	right:1px;
@@ -413,10 +413,10 @@ form .info {padding-left:90px;}
 }
 /* content misc
 --------------------------------------------------*/
-.blogit-next-entries a, .blogit-previous-entries a {font-size:130%; font-weight: bold;}
-.next a, .blogit-next-entries a {float:right;}
-.previous a, .blogit-previous-entries a {float:left;}
-#entrynavigation, .page-navigation {
+.blogit-older-entries a, .blogit-newer-entries a {font-size:130%; font-weight: bold;}
+.next a, .blogit-older-entries a {float:right;}
+.previous a, .blogit-newer-entries a {float:left;}
+#entrynavigation, .blogit-page-navigation {
 	overflow: hidden;
 	height:1%;
 	margin-bottom:13px;

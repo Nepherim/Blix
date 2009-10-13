@@ -140,8 +140,8 @@ kbr {color:#C55C3F;}
 #commentblock h2 a {color:#6C8C37;}
 #commentblock li.trackback,#commentblock li.pingback {list-style-image:url(images/spring/pingtrackback.gif);}
 #commentblock form {background-color:#EDF3DE;}
-#commentblock .header {background-color:#EDF3DE;}
-#commentblock .header.alt {background-color:#E9F7F6;}
+#commentblock .blogit-comment-header {background-color:#EDF3DE;}
+#commentblock .blogit-comment-header.alt {background-color:#E9F7F6;}
 /* form
 --------------------------------------------------*/
 form p {border-color:white;}
