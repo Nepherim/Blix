@@ -18,7 +18,7 @@ if (!empty($Blix_TitleBg))
 if (!empty($Blix_Width))
 	$HTMLStylesFmt['blix'] .= '#container, #credits {max-width:' .$Blix_Width .';}';
 
-global $PageLogoUrl, $PageLogoUrlHeight, $PageLogoUrlWidth, $HTMLStylesFmt,$SkinColor;
+global $PageLogoUrl, $PageLogoUrlHeight, $PageLogoUrlWidth,$SkinColor;
 if (!empty($PageLogoUrl)) {
 	dg_SetLogoHeightWidth(15);
 
@@ -27,6 +27,9 @@ if (!empty($PageLogoUrl)) {
 		'#header .sitetag{margin-top: ' .(30-substr($PageLogoUrlHeight,0,-2)) .'px}';
 }
 $SkinColor = dg_SetSkinColor('spring', array('spring','autumn'));
+global $HTMLHeaderFmt;
+SDV($HTMLHeaderFmt['jquery.js'], '<script type="text/javascript" src="' .$SkinDirUrl .'/javascript/jquery.js"></script>');
+SDV($HTMLHeaderFmt['blix.js'], '<script type="text/javascript" src="' .$SkinDirUrl .'/javascript/blix.js"></script>');
 
 # ----------------------------------------
 # - Standard Skin Setup

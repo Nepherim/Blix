@@ -136,6 +136,7 @@ img.center, img.aligncenter {
 }
 #header .sitetitle {
 	padding: 18px 15px 10px 0;
+	line-height: 1em;
 }
 #header .sitetitle a{float:left; font-size:30px; font-weight:bold; display: block}
 #header .sitetag {float: left; clear: left}
@@ -286,7 +287,7 @@ img.center, img.aligncenter {
 	right:14px;
 	top: 2px;
 	height:14px;
-	width:14px;
+	width:35px;
 	line-height: 1.25em;
 }
 
