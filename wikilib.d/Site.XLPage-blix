@@ -8,5 +8,5 @@ host=127.0.0.1
 name=Site.XLPage-blix
 rev=3
 targets=
-text=### Blix Template%0a  'search' => '',%0a  'Go!' =>,%0a  'theme adapted by' => '',%0a  'powered by' => '',%0a  'Page last modified on ' => ''%0a
+text=### Blix Template%0a  'search' => '',%0a  'Go!' =>,%0a  'theme adapted by' => '',%0a  'powered by' => '',%0a  'Page last modified on' => ''%0a
 
