@@ -9,7 +9,7 @@
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Blix"';
-$FmtPV['$SkinVersion'] = '"2.1.3"';
+$FmtPV['$SkinVersion'] = '"2.1.4"';
 
 global $Blix_Width, $Blix_TitleBg, $Blix_TitleColor, $SkinDirUrl, $HTMLStylesFmt;
 if (!empty($Blix_TitleBg))
@@ -28,7 +28,7 @@ if (!empty($PageLogoUrl)) {
 }
 $SkinColor = dg_SetSkinColor('spring', array('spring','autumn'));
 global $HTMLHeaderFmt;
-SDV($HTMLHeaderFmt['jquery.js'], '<script type="text/javascript" src="' .$SkinDirUrl .'/javascript/jquery.js"></script>');
+SDV($HTMLHeaderFmt['jquery.js'], '<script type="text/javascript" src="' .$SkinDirUrl .'/javascript/jquery.min.js"></script>');
 SDV($HTMLHeaderFmt['blix.js'], '<script type="text/javascript" src="' .$SkinDirUrl .'/javascript/blix.js"></script>');
 
 # ----------------------------------------

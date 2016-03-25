@@ -341,6 +341,7 @@ img.center, img.aligncenter {
 #commentblock li p {padding:0 0 10px 0;}
 #commentblock .blogit-comment-header {
 /*	position:relative;*/
+	display: inline !important;
 	margin:0 0 10px 0;
 	padding:0 6px;
 
@@ -619,3 +620,4 @@ img { border:0px; }
 	font-weight: bold;
 	font-size: 110%;
 	}
+.blogit-admin-link{ display: inline !important; }
