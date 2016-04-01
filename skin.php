@@ -9,7 +9,7 @@
  */
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Blix"';
-$FmtPV['$SkinVersion'] = '"2.1.4"';
+$FmtPV['$SkinVersion'] = '"2.1.5"';
 
 global $Blix_Width, $Blix_TitleBg, $Blix_TitleColor, $SkinDirUrl, $HTMLStylesFmt;
 if (!empty($Blix_TitleBg))
